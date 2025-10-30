@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+
+.clock-container {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.clock {
+    font-size: 2em;
+    margin: 5px 0;
+}
+
+.clock-label {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+}
