@@ -1,13 +1,21 @@
-function updateClock() {
+function updateAllClocks() {
     const now = new Date();
 
-    const options = { timeZone: "America/Chicago", hour12: false, hour: "2-digit", minute: "2-digit", second: "2-digit" };
-    const cstTime = now.toLocaleTimeString("en-US", options);
+    const options = { hour12: false, hour: "2-digit", minute: "2-digit", second: "2-digit" };
 
-    // Display on page
+    // Get time in each US time zone
+    const pstTime = now.toLocaleTimeString("en-US", { ...options, timeZone: "America/Los_Angeles" });
+    const mstTime = now.toLocaleTimeString("en-US", { ...options, timeZone: "America/Denver" });
+    const cstTime = now.toLocaleTimeString("en-US", { ...options, timeZone: "America/Chicago" });
+    const estTime = now.toLocaleTimeString("en-US", { ...options, timeZone: "America/New_York" });
+
+    // Update the HTML elements
+    document.getElementById("pst-clock").textContent = pstTime;
+    document.getElementById("mst-clock").textContent = mstTime;
     document.getElementById("cst-clock").textContent = cstTime;
+    document.getElementById("est-clock").textContent = estTime;
 }
 
-// Update every second
-setInterval(updateClock, 1000);
-updateClock();
+// Run every second
+setInterval(updateAllClocks, 1000);
+updateAllClocks();
