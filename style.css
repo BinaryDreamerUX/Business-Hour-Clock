@@ -18,6 +18,13 @@ body {
     margin: 5px 0;
 }
 
+.separator {
+    height: 2px;        /* thickness of the line */
+    background-color: #333;  /* line color, you can match the frame later */
+    margin: 5px 0;      /* space above and below the line */
+    width: 100%;        /* span full width of container */
+}
+
 .clock-label {
     display: block;
     font-size: 0.9em;
