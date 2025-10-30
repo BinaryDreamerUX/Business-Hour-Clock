@@ -19,3 +19,20 @@ function updateAllClocks() {
 // Run every second
 setInterval(updateAllClocks, 1000);
 updateAllClocks();
+
+function addBusinessHours(startDate, hoursToAdd) {
+    let date = new Date(startDate);
+    let addedHours = 0;
+
+    while (addedHours < hoursToAdd) {
+        date.setHours(date.getHours() + 1);
+        const day = date.getDay();
+        const hour = date.getHours();
+        // Skip weekends
+        if (day !== 0 && day !== 6) {
+            addedHours++;
+        }
+    }
+    return date;
+}
+
