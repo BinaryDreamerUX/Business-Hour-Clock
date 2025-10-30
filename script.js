@@ -1,7 +1,7 @@
 function updateAllClocks() {
     const now = new Date();
 
-    const options = { hour12: false, hour: "2-digit", minute: "2-digit", second: "2-digit" };
+    const options = { hour12: true, hour: "2-digit", minute: "2-digit", second: "2-digit" };
 
     // Get time in each US time zone
     const pstTime = now.toLocaleTimeString("en-US", { ...options, timeZone: "America/Los_Angeles" });
