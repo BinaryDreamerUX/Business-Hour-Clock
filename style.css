@@ -37,10 +37,12 @@ body {
 }
 
 #us-map {
-    width: 90%;
-    max-width: 800px;
+    width: 100%;
+    max-width: 1000px;
     height: auto;
     border: 2px solid #333;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    margin: 20px auto;
+    display: block;
 }
