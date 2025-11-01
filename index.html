@@ -50,5 +50,15 @@
     </div>
 
     <script src="script.js"></script> 
+
+   <p id="last-updated" style="text-align:center; font-size:0.9em; color:#666; margin-top:20px;"></p>
+
+<script>
+  // Display the date and time the page was last modified
+  const updated = new Date(document.lastModified);
+  document.getElementById('last-updated').textContent =
+    `Last updated on ${updated.toLocaleDateString()} at ${updated.toLocaleTimeString()}`;
+</script>
+
 </body>
 </html>
